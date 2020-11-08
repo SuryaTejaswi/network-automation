@@ -40,12 +40,12 @@
   vars:
     haproxy_mode: http
     haproxy_algorithm: roundrobin
-    haproxy_backend: Web_servers
+    haproxy_backend_servers: Web_servers
   tasks:
    - name: haproxy updated
      apt:
       name: haproxy
-      state: present
+      state: latest
       update_cache: yes
    
 
